@@ -1,5 +1,6 @@
 import os
 import sys 
+print("here is running from main.py!")
 print(os.path.join(os.getcwd(),"leetcode"))
 sys.path.append(os.path.join(os.getcwd(),"leetcode"))
 
