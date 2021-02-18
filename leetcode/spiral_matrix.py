@@ -33,13 +33,21 @@ def spiral_matrix(matrix):
   res = []
 
   while l < r and t < b:
-    # for rows
+    # for top row
     for i in range(l,r):
       res.append(matrix[t][i])
     t += 1
-    # for cols
+    # for right col
     for i in range(t,b):
       res.append(matrix[i][r - 1])
     r -= 1
+    # for bottom in reversed order
+    for i in range(r-1, l-1,-1):
+      res.append(matrix[b-1][i])
+
+    # for left col form bottom to top in reversed order
+    for i in range(b-1, t-1,-1):
+      res.append(matrix[i][0])
+
   return res
 
